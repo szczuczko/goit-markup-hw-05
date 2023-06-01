@@ -217,6 +217,14 @@ h1:hover {
   text-decoration: underline solid var(--button-blue);
 }
 
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%) scale(0) rotate(0deg)
+    skew(40deg, 40deg);
+}
+
 /* Pierwsza sekcja */
 .first-section {
   max-width: 1600px;

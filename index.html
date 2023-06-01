@@ -75,7 +75,12 @@
             EFEKTYWNE ROZWIĄZANIA<br />
             DLA WASZEGO BIZNESU
           </h1>
-          <button class="button" type="button">Zamów usługe</button>
+          <button class="button" type="button" data-modal-open>
+            Zamów usługe
+          </button>
+          <div class="modal is-hidden" data-modal>
+            <button data-modal-close>X</button>
+          </div>
         </div>
       </section>
 
@@ -87,22 +92,26 @@
               <svg class="first-section-logo">
                 <use
                   href="./images/icons.svg#icon-antenna"
-                  y="25"
-                  x="100"
+                  width="70px"
+                  x="100px"
                 ></use>
               </svg>
             </li>
             <li>
               <svg class="first-section-logo">
-                <use href="./images/icons.svg#icon-clock" y="25" x="100"></use>
+                <use
+                  href="./images/icons.svg#icon-clock"
+                  width="70px"
+                  x="100px"
+                ></use>
               </svg>
             </li>
             <li>
               <svg class="first-section-logo">
                 <use
                   href="./images/icons.svg#icon-diagram"
-                  y="25"
-                  x="100"
+                  width="70px"
+                  x="100px"
                 ></use>
               </svg>
             </li>
@@ -110,8 +119,8 @@
               <svg class="first-section-logo">
                 <use
                   href="./images/icons.svg#icon-astronaut"
-                  y="25"
-                  x="100"
+                  width="70px"
+                  x="100px"
                 ></use>
               </svg>
             </li>
@@ -540,5 +549,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
