@@ -250,6 +250,7 @@ h1:hover {
   align-items: center;
   justify-content: center;
   visibility: visible;
+  z-index: 1;
 }
 
 .modal-content {
