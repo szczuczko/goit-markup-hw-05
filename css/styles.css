@@ -249,7 +249,7 @@ h1:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  visibility: hidden;
+  visibility: visible;
 }
 
 .modal-content {
@@ -285,8 +285,9 @@ h1:hover {
 }
 
 .is-hidden {
-  opacity: 1;
-  visibility: visible;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 /* Pierwsza sekcja */
