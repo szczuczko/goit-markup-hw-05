@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+*:hover::before,
+*:hover::after,
+*:focus::before,
+*:focus::after {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 :root {
   --white: #ffffff;
   --almost-white: #e5e5e5;
@@ -106,6 +116,7 @@ header {
 .menu-blue {
   text-decoration: none;
   color: var(--blue);
+  position: relative;
 }
 
 .menu {
@@ -116,6 +127,17 @@ header {
 .menu-blue:hover,
 .menu:hover {
   text-decoration: underline solid var(--blue);
+}
+
+.menu-blue::after {
+  content: "";
+  position: absolute;
+  bottom: -42px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--blue);
 }
 
 .contact {
@@ -227,15 +249,14 @@ h1:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
-  opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .modal-content {
   position: relative;
   background-color: var(--white);
+  color: var(--black);
+  text-transform: none;
   width: 528px;
   height: 581px;
   border-radius: 4px;
@@ -336,14 +357,6 @@ h1:hover {
   padding: 94px 0 94px 0;
   background-color: var(--almost-white);
 }
-.second-section-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0;
-  gap: 30px;
-}
 
 .h2-second-section {
   text-align: center;
@@ -356,6 +369,37 @@ h1:hover {
 
 .h2-second-section:hover {
   text-decoration: underline solid var(--blue);
+}
+
+.second-section-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  gap: 30px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  display: block;
+}
+
+.image-container .label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 70px;
+  text-align: center;
 }
 
 /* Trzecia sekcja */
